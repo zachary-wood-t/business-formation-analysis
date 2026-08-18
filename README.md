@@ -19,6 +19,22 @@ applications get filed, and which of them actually turn into real employers.
 - **Formation:** a business prospect that becomes a real employer, signified by having a first instance of payroll
 - **Conversion rate:** the share of business prospects (applications) that become employers (formations)
 
+## Key findings
+
+- **Volume concentrates in a few sectors.** Retail Trade and Professional Services lead
+  application counts by millions, and that ranking has held steady since 2004.
+- **Applications are seasonal.** Filings peak in Q1, March especially, and tail off
+  through the back half of the year.
+- **Volume and follow-through are different stories.** Accommodation and Food Services
+  converts roughly 27% of its applications into employers, while Management of Companies
+  converts around 1%. The highest-volume sectors sit in the middle of that range.
+- **Conversion is largely predictable.** Sector, month, planned-wages share, and
+  corporation share explain ~93% of the variance in conversion rate, with planned wages
+  the strongest positive predictor.
+
+A non-technical write-up of these findings is published on Medium:
+[Starting a Business is a lot More Than Just Filing the Paperwork](https://medium.com/@zachrwood28/starting-a-business-is-a-lot-more-than-just-filing-the-paperwork-4f09e98516ab)
+
 ## Repository contents
 
 ```
@@ -56,6 +72,29 @@ corporation share, predicting conversion rate.
 
 Python with pandas, numpy, scikit-learn, matplotlib, and seaborn packages imported. The notebook is
 published with its output cells populated and is meant to be read rather than re-run.
+
+## Setup
+
+### Running the notebook yourself
+
+```bash
+git clone https://github.com/zachary-wood-t/business-formation-analysis.git
+cd business-formation-analysis
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook business_formation_analysis.ipynb
+```
+
+Then run the cells top to bottom.
+
+### Downloading the source data yourself
+
+The copy in `data/` is a snapshot. To pull a current one:
+
+1. Go to the [Business Formation Statistics data page](https://www.census.gov/econ/bfs/data.html).
+2. Download the monthly time series CSV. One file carries every series, geography, and
+   sector used here.
+3. The matching [data dictionary](https://www.census.gov/econ/bfs/pdf/bfs_monthly_data_dictionary.pdf)
+   defines every column and series code.
 
 ## Limitations
 
